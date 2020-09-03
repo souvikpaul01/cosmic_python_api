@@ -9,10 +9,11 @@
 </head>
 
 <body>
-{% for i in range(0,2)%}
-
-  <li>{{title}}</li>
-
+{% for i in range(0,l)%}
+<div>
+	<h3>{{ title[i] }}</h3> 
+	<img alt= '' src = {{ url[i] }}>
+</div>
 {%endfor%}
 
 </body>
