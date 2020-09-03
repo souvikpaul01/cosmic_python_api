@@ -31,7 +31,7 @@ def main():
 @app.route("/index", methods = ['GET'])
 
 def index():
-    return render_template('home/ubuntu/index.html',title = dict)
+    return render_template('index.html',title = dict)
 
 #print(response.text.encode('utf8'))
 #print(response.url)
