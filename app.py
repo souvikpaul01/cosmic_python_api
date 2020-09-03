@@ -10,18 +10,9 @@ headers= {'read_key':'SSL79aDN2ex9V2Bb0S2wOAwJG076H6OE2Yb9VNuTr58bdZNBXW',
 
 
 response = requests.get(url, params=headers)
-
 json_response = response.json()
-
-#dict = json.loads(json_response)
-
 j_dict = json_response['objects']
-'''
-for objects in j_dict:
-    title = objects['title']
-    url = objects['metadata']['hero']['imgix_url']
-         #   return title,images
-'''
+
 
 title = []
 url = []

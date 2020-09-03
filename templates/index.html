@@ -1,20 +1,35 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Page</title>
-
+  <title>Python Cosmic Blog</title>
+  <meta name="description" content="Python Cosmic Blog">
+  <meta name="author" content="Cosmic">
+  <style>
+    body {
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: left;
+      color: #2c3e50;
+    }
+  </style>
 </head>
-
 <body>
-{% for i in range(0,l)%}
-<div>
-	<h3>{{ title[i] }}</h3> 
-	<img alt= '' src = {{ url[i] }}>
-</div>
-{%endfor%}
-
+  <div>
+    <h1>
+      Python Cosmic Blog
+    </h1>
+    {% if l == 0 %}
+      <h2>No post found</h2>
+    {%endif%}
+    {% for i in range(0,l) %}
+    <article>
+      <h3>{{ title[i] }}</h3>
+      <img alt="{{ title[i]}}" src="{{ url[i] }}?w=400"/>
+ 
+    </article>
+    {%endfor%}
+  </div>
 </body>
 </html>
