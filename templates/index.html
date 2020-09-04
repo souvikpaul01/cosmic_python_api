@@ -23,13 +23,13 @@
     {% if l == 0 %}
       <h2>No post found</h2>
     {%endif%}
-    {% for i in range(0,l) %}
+    {% for post in posts %}
     <article>
-      <h3>{{ title[i] }}</h3>
-      <img alt="{{ title[i]}}" src="{{ url[i] }}?w=400"/>
- 
+      <h3>{{ post['title'] }}</h3>
+      <img alt="{{ post['metadata']['hero']['imgix_url']}}" src="{{ post['metadata']['hero']['imgix_url'] }}?w=400"/>
     </article>
     {%endfor%}
   </div>
 </body>
 </html>
+
